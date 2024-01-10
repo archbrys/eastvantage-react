@@ -1,10 +1,9 @@
 import React from 'react'
-import './App.css'
 import User from './modules/User'
 
 function App() {
   return (
-    <div className="App">
+    <div className="flex flex-col justify-center items-center mt-[50px]">
       <User />
     </div>
   )
