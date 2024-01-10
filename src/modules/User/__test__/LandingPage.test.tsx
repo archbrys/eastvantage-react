@@ -3,7 +3,11 @@ import { render, renderHook, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { act } from 'react-dom/test-utils'
 import LandingPage from '../components/LandingPage'
-import { USER_DATA_TEST_ID, USER_STORAGE_KEY } from '../constant'
+import {
+  LOADER_DATA_TEST_ID,
+  USER_DATA_TEST_ID,
+  USER_STORAGE_KEY,
+} from '../constant'
 import { useLocalStorage } from '../hooks/useLocalStorage'
 
 jest.mock('axios')
@@ -22,7 +26,7 @@ describe('User Component', () => {
 
     await userEvent.click(button)
     waitFor(() => {
-      expect(screen.getByTestId('loader')).toBeInTheDocument()
+      expect(screen.getByTestId(LOADER_DATA_TEST_ID)).toBeInTheDocument()
     })
   })
 
