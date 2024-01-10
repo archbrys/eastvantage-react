@@ -39,7 +39,7 @@ You can access it by going to `localhost:3000`
 To run tests, run the following command
 
 ```bash
-  npm run test
+  yarn test --coverage
 ```
 
 ## Authors
