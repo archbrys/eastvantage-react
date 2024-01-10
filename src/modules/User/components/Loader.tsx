@@ -2,7 +2,7 @@ import React from 'react'
 
 function Loader() {
   return (
-    <div role="status" data-testid="loader">
+    <div role="status" data-testid="loader" className="flex justify-center">
       <svg
         aria-hidden="true"
         className="w-8 h-8 text-gray-200 animate-spin fill-blue-600"
