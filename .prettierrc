@@ -1,8 +1,0 @@
-{
-  "trailingComma": "es5",
-  "semi": false,
-  "singleQuote": true,
-  "editor.formatOnSave": true,
-  "tabWidth": 2,
-  "endOfLine": "lf"
-}

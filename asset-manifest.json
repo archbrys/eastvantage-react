@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/eastvantage-react/static/css/main.3540cb53.css",
-    "main.js": "/eastvantage-react/static/js/main.323148a3.js",
+    "main.css": "/eastvantage-react/static/css/main.eb747397.css",
+    "main.js": "/eastvantage-react/static/js/main.a2575d72.js",
     "static/js/787.fa819aae.chunk.js": "/eastvantage-react/static/js/787.fa819aae.chunk.js",
     "index.html": "/eastvantage-react/index.html",
-    "main.3540cb53.css.map": "/eastvantage-react/static/css/main.3540cb53.css.map",
-    "main.323148a3.js.map": "/eastvantage-react/static/js/main.323148a3.js.map",
+    "main.eb747397.css.map": "/eastvantage-react/static/css/main.eb747397.css.map",
+    "main.a2575d72.js.map": "/eastvantage-react/static/js/main.a2575d72.js.map",
     "787.fa819aae.chunk.js.map": "/eastvantage-react/static/js/787.fa819aae.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3540cb53.css",
-    "static/js/main.323148a3.js"
+    "static/css/main.eb747397.css",
+    "static/js/main.a2575d72.js"
   ]
 }
