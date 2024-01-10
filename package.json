@@ -2,6 +2,7 @@
   "name": "react-tailwind-boilerplate",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://archbrys.github.io/eastvantage-react",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
     "@testing-library/jest-dom": "^5.17.0",
@@ -27,7 +28,9 @@
     "eject": "react-scripts eject",
     "lint": "eslint . --fix --max-warnings=0",
     "format": "prettier . --write",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -61,6 +64,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "gh-pages": "^6.1.1",
     "husky": "^8.0.3",
     "lint-staged": "^15.1.0",
     "prettier": "^3.1.0",
