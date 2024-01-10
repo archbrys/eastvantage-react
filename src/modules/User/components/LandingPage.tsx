@@ -1,11 +1,15 @@
 import React, { useEffect } from 'react'
 import { fetchUsers } from '../actions'
 import { useLocalStorage } from '../hooks/useLocalStorage'
-import { IUser } from '../interface'
+import { IUser, IUserProps } from '../interface'
 import Loader from './Loader'
-import { USER_LOADING_KEY, USER_STORAGE_KEY } from '../constant'
+import {
+  USER_DATA_TEST_ID,
+  USER_LOADING_KEY,
+  USER_STORAGE_KEY,
+} from '../constant'
 
-function User() {
+function User({ dataTestId }: IUserProps) {
   const [users, setUsers] = useLocalStorage(USER_STORAGE_KEY, [])
   const [loading, setLoading] = useLocalStorage(USER_LOADING_KEY, false)
   const controller = new AbortController()
@@ -17,12 +21,7 @@ function User() {
       setUsers(response)
       setLoading(false)
     } catch (err) {
-      if (err instanceof Error) {
-        if (err.name !== 'CanceledError') {
-          // Handle cancelled error here
-        }
-      }
-      // Handle Unexpected error
+      // Handle error
       setLoading(false)
     }
   }
@@ -34,8 +33,8 @@ function User() {
   }, [])
 
   return (
-    <>
-      <div className="mb-[20px]">
+    <div data-testid={dataTestId}>
+      <div className="mb-[20px] flex justify-flex">
         <button
           type="button"
           className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2"
@@ -50,6 +49,8 @@ function User() {
         {loading ? (
           <Loader />
         ) : (
+          users &&
+          Array.isArray(users) &&
           users.map((data: IUser) => {
             const {
               email,
@@ -72,8 +73,12 @@ function User() {
           })
         )}
       </ul>
-    </>
+    </div>
   )
+}
+
+User.defaultProps = {
+  dataTestId: USER_DATA_TEST_ID,
 }
 
 export default User

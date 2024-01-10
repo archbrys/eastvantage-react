@@ -1,3 +1,7 @@
+export interface IUserProps {
+  dataTestId: string
+}
+
 export interface IUser {
   ell: string
   dob: { date: string; age: number }

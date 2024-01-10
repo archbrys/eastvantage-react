@@ -2,7 +2,7 @@ import React from 'react'
 
 function Loader() {
   return (
-    <div role="status">
+    <div role="status" data-testid="loader">
       <svg
         aria-hidden="true"
         className="w-8 h-8 text-gray-200 animate-spin fill-blue-600"

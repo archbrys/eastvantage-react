@@ -77,5 +77,10 @@
     "*.tsx": [
       "eslint --cache --fix"
     ]
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!axios)/"
+    ]
   }
 }
