@@ -3,7 +3,7 @@ export interface IUserProps {
 }
 
 export interface IUser {
-  ell: string
+  cell: string
   dob: { date: string; age: number }
   email: string
   gender: string
